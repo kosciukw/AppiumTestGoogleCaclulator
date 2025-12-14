@@ -8,7 +8,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.uiautomation.locatorstest"
+        applicationId = "com.uiautomation.calculatortest"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -25,7 +25,7 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
