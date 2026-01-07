@@ -1,12 +1,12 @@
 package com.uiautomation.page
 
 import com.uiautomation.page.base.BasePage
-import com.uiautomation.util.DriverUtil
+import com.uiautomation.util.MobileInteractor
 import io.appium.java_client.AppiumBy
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 
-class HistoryPageObject(private val driverUtil: DriverUtil) : BasePage(driverUtil) {
+class HistoryPageObject(private val mobileInteractor: MobileInteractor) : BasePage(mobileInteractor) {
 
     override val container: By = AppiumBy.id(CONTAINER_ID)
 
@@ -16,24 +16,24 @@ class HistoryPageObject(private val driverUtil: DriverUtil) : BasePage(driverUti
     private val navigateUpClassName: By = AppiumBy.className(NAVIGATE_UP_IMAGE_BUTTON_CLASS_NAME)
     private val toolbarId: By = AppiumBy.id(TOOLBAR_ID)
 
-    fun getCalculationHistory() = driverUtil.getElements(formulaId)
+    fun getCalculationHistory() = mobileInteractor.getElements(formulaId)
 
     fun navigateUp() {
-        val toolbar = driverUtil.getElement(toolbarId)
+        val toolbar = mobileInteractor.getElement(toolbarId)
         val navigateUpButton = toolbar.findElement(navigateUpClassName)
 
         navigateUpButton.click()
     }
 
     fun dragToFormula(predicate: (WebElement) -> Boolean): WebElement? {
-        return driverUtil.dragToElement(
+        return mobileInteractor.dragToElement(
             elementsLocator = formulaId,
             predicate = predicate
         )
     }
 
     fun scrollToFormula(formulaText: String): WebElement? {
-        return driverUtil.scrollToElement(
+        return mobileInteractor.scrollToElement(
             scrollableResourceId = HISTORY_RECYCLER_VIEW_ID,
             targetResourceId = FORMULA_ID,
             textToFind = formulaText
