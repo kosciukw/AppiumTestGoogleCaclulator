@@ -1,4 +1,4 @@
-package com.uiautomation.engine
+package com.uiautomation.engine.appium
 
 object AppiumParameters {
     const val PLATFORM_NAME = "platformName"
