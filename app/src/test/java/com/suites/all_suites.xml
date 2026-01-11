@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Calculator Test Suite">
+
+    <parameter name="platformName" value="Android" />
+    <parameter name="deviceName" value="emulator-5554" />
+    <parameter name="appPackage" value="com.google.android.calculator" />
+    <parameter name="appActivity" value="com.android.calculator2.Calculator" />
+    <parameter name="noReset" value="false" />
+    <parameter name="appiumPort" value="4725" />
+
+    <suite-files>
+        <suite-file path="calculator_test.xml"/>
+        <suite-file path="history_test.xml"/>
+    </suite-files>
+</suite>

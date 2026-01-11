@@ -1,56 +1,56 @@
 package com.uiautomation.page
 
 import com.uiautomation.page.base.BasePage
-import com.uiautomation.util.DriverUtil
+import com.uiautomation.util.MobileInteractor
 import io.appium.java_client.AppiumBy
 import org.openqa.selenium.By
 
-class CalculatorPageObject(private val driverUtil: DriverUtil) : BasePage(driverUtil) {
+class CalculatorPageObject(private val mobileInteractor: MobileInteractor) : BasePage(mobileInteractor) {
 
     override val container: By = AppiumBy.id(CONTAINER_ID)
 
     fun swipeDownExpression() {
-        driverUtil.dragScreenVertical(
+        mobileInteractor.dragScreenVertical(
             startPercent = 0.25,
             endPercent = 0.9
         )
     }
 
     fun clickButtonZero() {
-        driverUtil.getElement(buttonZeroId).click()
+        mobileInteractor.getElement(buttonZeroId).click()
     }
 
     fun clickButtonOne() {
-        driverUtil.getElement(buttonOneId).click()
+        mobileInteractor.getElement(buttonOneId).click()
     }
 
     fun clickButtonTwo() {
-        driverUtil.getElement(buttonTwoId).click()
+        mobileInteractor.getElement(buttonTwoId).click()
     }
 
     fun clickButtonSeven() {
-        driverUtil.getElement(buttonSevenId).click()
+        mobileInteractor.getElement(buttonSevenId).click()
     }
 
     fun clickButtonAdd() {
-        driverUtil.getElement(buttonAddId).click()
+        mobileInteractor.getElement(buttonAddId).click()
     }
 
     fun clickButtonSubtract() {
-        driverUtil.getElement(buttonSubtractId).click()
+        mobileInteractor.getElement(buttonSubtractId).click()
     }
 
     fun clickButtonEquals() {
-        driverUtil.getElement(buttonEqualsId).click()
+        mobileInteractor.getElement(buttonEqualsId).click()
     }
 
     fun clickButtonClear() {
-        driverUtil.getElement(buttonClearId).click()
+        mobileInteractor.getElement(buttonClearId).click()
     }
 
-    fun getFormulaText() = driverUtil.getElement(formulaFieldId).text
+    fun getFormulaText() = mobileInteractor.getElement(formulaFieldId).text
 
-    fun getResultFinalText() = driverUtil.getElement(resultFinalFieldId).text
+    fun getResultFinalText() = mobileInteractor.getElement(resultFinalFieldId).text
 
 
     // Digits

@@ -2,16 +2,13 @@ package com.uiautomation.util
 
 import io.appium.java_client.AppiumBy
 import io.appium.java_client.AppiumDriver
-import io.appium.java_client.android.AndroidDriver
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.interactions.PointerInput
 import org.openqa.selenium.interactions.Sequence
 import java.time.Duration
-import java.util.regex.Pattern
-import kotlin.math.max
 
-class DriverUtil(private val driver: AppiumDriver) {
+class MobileInteractor(private val driver: AppiumDriver) {
 
     fun dragToElement(
         elementsLocator: By,

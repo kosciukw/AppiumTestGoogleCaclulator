@@ -1,5 +1,6 @@
 package com.uiautomation.test
 
+import com.uiautomation.engine.TestNGListener
 import com.uiautomation.page.CalculatorPageObject
 import com.uiautomation.page.HistoryPageObject
 import com.uiautomation.page.base.BaseTest
@@ -7,8 +8,10 @@ import org.junit.Assert
 import org.testng.annotations.AfterMethod
 import org.testng.annotations.BeforeClass
 import org.testng.annotations.BeforeMethod
+import org.testng.annotations.Listeners
 import org.testng.annotations.Test
 
+@Listeners(TestNGListener::class)
 class CalculationHistoryTest : BaseTest() {
 
     private val calculatorPageObject: CalculatorPageObject by lazy {
@@ -47,7 +50,6 @@ class CalculationHistoryTest : BaseTest() {
     fun `Clear input`() {
         calculatorPageObject.clickButtonClear()
     }
-
 
     @AfterMethod
     fun tearDown() {

@@ -1,13 +1,15 @@
 package com.uiautomation.test
 
+import com.uiautomation.engine.TestNGListener
 import com.uiautomation.page.CalculatorPageObject
 import com.uiautomation.page.HistoryPageObject
 import com.uiautomation.page.base.BaseTest
 import org.testng.Assert
-import org.testng.annotations.AfterMethod
 import org.testng.annotations.BeforeMethod
+import org.testng.annotations.Listeners
 import org.testng.annotations.Test
 
+@Listeners(TestNGListener::class)
 class CalculatorTest : BaseTest() {
 
     private val calculatorPageObject: CalculatorPageObject by lazy {
