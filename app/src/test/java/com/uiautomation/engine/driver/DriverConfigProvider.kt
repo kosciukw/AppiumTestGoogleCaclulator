@@ -1,5 +1,6 @@
-package com.uiautomation.engine
+package com.uiautomation.engine.driver
 
+import com.uiautomation.engine.appium.AppiumParameters
 import org.testng.ITestContext
 
 object DriverConfigProvider {

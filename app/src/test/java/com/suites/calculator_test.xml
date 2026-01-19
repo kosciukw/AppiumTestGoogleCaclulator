@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Calculator Test Suite">
-    <test name="Calculator main test">
+<suite name="Calculator Suite">
+    <test name="Calculator Feature Test">
+        <parameter name="cucumber.filter.tags" value="@Calculator"/>
         <classes>
-            <class name="com.uiautomation.test.CalculatorTest" />
+            <class name="com.uiautomation.engine.cucumber.CucumberRunner"/>
         </classes>
     </test>
 </suite>

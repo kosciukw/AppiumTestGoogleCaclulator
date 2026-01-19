@@ -1,4 +1,4 @@
-package com.uiautomation.engine
+package com.uiautomation.engine.driver
 
 data class DriverConfig(
     val platformName: String,
